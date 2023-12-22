@@ -171,3 +171,126 @@ function loadItemShoe(){
         this.querySelector('ul').style.display = 'none';
     });
 });*/
+
+//test casre men procut
+
+let thisPageShoeMen=1;
+let limitShoeMen=6;
+let listShoeMen= document.querySelectorAll('.menproduct-container .box')
+
+
+
+function loadItemShoeMen(){
+    let firstGetShoeMen = limitShoeMen * (thisPageShoeMen - 1);
+     let endGetShoeMen = limitShoeMen * thisPageShoeMen - 1;
+     listShoeMen.forEach((box , key)=>{
+         if(key >= firstGetShoeMen && key <= endGetShoeMen){
+             box.style.display = 'block';
+         }
+         else{
+             box.style.display = 'none';
+         }
+     })
+     listPageShoeMen();
+ }
+ 
+ loadItemShoeMen();
+ 
+ function listPageShoeMen(){
+     let count = Math.ceil(listShoeMen.length / limitShoeMen);
+     document.querySelector('.listPageShoeMen').innerHTML = '';
+ 
+     if(thisPageShoeMen !=1){
+         let prves = document.createElement('li');
+         prves.innerText = '<';
+         prves.setAttribute('onclick',"changePageShoeMen("+ (thisPageShoeMen - 1) +")");
+         document.querySelector('.listPageShoeMen').appendChild(prves);
+         
+     }
+     
+ 
+ 
+     for(i=1 ;i<= count; i++){
+         let newPageShoeMen = document.createElement('li');
+         newPageShoeMen.innerText = i;
+         if(i == thisPageShoeMen){
+             newPageShoeMen.classList.add('active');
+         }
+         newPageShoeMen.setAttribute('onclick',"changePageShoeMen("+ i +")");
+         document.querySelector('.listPageShoeMen').appendChild(newPageShoeMen);
+     }
+ 
+     if(thisPageShoeMen != count){
+         let next =document.createElement('li');
+         next.innerText = '>';
+         next.setAttribute('onclick',"changePageShoeMen("+ (thisPageShoeMen + 1) +")");
+         document.querySelector('.listPageShoeMen').appendChild(next);
+ 
+     }
+ }
+ 
+ function changePageShoeMen(i){
+     thisPageShoeMen = i;
+     loadItemShoeMen();
+ }
+ 
+ //Women
+ let thisPageShoeWomen=1;
+let limitShoeWomen=6;
+let listShoeWomen= document.querySelectorAll('.womenproduct-container .box')
+
+
+
+function loadItemShoeWomen(){
+    let firstGetShoeWomen = limitShoeWomen * (thisPageShoeWomen - 1);
+     let endGetShoeWomen = limitShoeWomen * thisPageShoeWomen - 1;
+     listShoeWomen.forEach((box , key)=>{
+         if(key >= firstGetShoeWomen && key <= endGetShoeWomen){
+             box.style.display = 'block';
+         }
+         else{
+             box.style.display = 'none';
+         }
+     })
+     listPageShoeWomen();
+ }
+ 
+ loadItemShoeWomen();
+ 
+ function listPageShoeWomen(){
+     let count = Math.ceil(listShoeWomen.length / limitShoeWomen);
+     document.querySelector('.listPageShoeWomen').innerHTML = '';
+ 
+     if(thisPageShoeWomen !=1){
+         let prves = document.createElement('li');
+         prves.innerText = '<';
+         prves.setAttribute('onclick',"changePageShoeWomen("+ (thisPageShoeWomen - 1) +")");
+         document.querySelector('.listPageShoeWomen').appendChild(prves);
+         
+     }
+     
+ 
+ 
+     for(i=1 ;i<= count; i++){
+         let newPageShoeWomen = document.createElement('li');
+         newPageShoeWomen.innerText = i;
+         if(i == thisPageShoeWomen){
+             newPageShoeWomen.classList.add('active');
+         }
+         newPageShoeWomen.setAttribute('onclick',"changePageShoeWomen("+ i +")");
+         document.querySelector('.listPageShoeWomen').appendChild(newPageShoeWomen);
+     }
+ 
+     if(thisPageShoeWomen != count){
+         let next =document.createElement('li');
+         next.innerText = '>';
+         next.setAttribute('onclick',"changePageShoeWomen("+ (thisPageShoeWomen + 1) +")");
+         document.querySelector('.listPageShoeWomen').appendChild(next);
+ 
+     }
+ }
+ 
+ function changePageShoeWomen(i){
+     thisPageShoeWomen = i;
+     loadItemShoeWomen();
+ }
