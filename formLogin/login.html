@@ -1,0 +1,48 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Login</title>
+    
+ </head>
+ <body>
+    <div class="wrapper">
+      <div class="info_box">
+         <form action="#">
+         <div class="header">
+            <span>Đăng nhập</span>
+         </div>
+         <div class="input_box">
+            <input type="text" id="username" class="input-field" required>
+            <label for="user" class="label">Tên tài khoản</label>
+            <i class="bx bx-user icon"></i>
+         </div>
+         <div class="input_box">
+            <input type="password" id="password" class="input-field" required>
+            <label for="user" class="label">Mật khẩu</label>
+            <i class="bx bx-lock-alt icon"></i>
+      </div>
+      <div class="remember-forgot">
+         <div class="remember-me">
+            <input type="checkbox" id="remember">
+            <label for="remember"> Nhớ tài khoản</label>
+         </div>
+         <div class="forgot">
+            <a href="forgor.html">Quên mật khẩu?</a>
+         </div>
+      </div>
+        <div class="input_box">
+         <input type="submit" target="none" class="input-submit" value="Đăng nhập" onclick="window.location.href='../index.html';">
+        </div>
+         <div class="login-register">
+            <p>Chưa có tài khoản? <a href="regis.html" class="register-link">Đăng ký ngay!</a></p>
+         </div>
+      </form>
+      </div>
+   </div>
+ </body>
+ </html>
