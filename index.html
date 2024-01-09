@@ -12,11 +12,12 @@
 <body> 
     <header>
         <div class="nav container">
-            
+
             <a href="#" class="logo">Sneak<span>Hub</span></a>
             <ul class="navbar">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#product" id="parentItem">Sản phẩm</a>
+                <li><a href="#home" class="active">Trang chủ</a></li>
+                <li>
+                    <a href="#product" id="parentItem">Sản phẩm</a>
                     <ul>
                         <li><a href="#productshoe">Giày trẻ em</a></li>
                         <li><a href="#menproduct">Giày nam</a></li>
@@ -25,24 +26,33 @@
                 </li>
                 <li><a href="#accessory">Phụ kiện</a></li>
                 <li><a href="#blog">Tin tức</a></li>
-                
+
             </ul>
-            
+
             <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
             <div class="search-box container">
                 <input type="search" name="" id="" placeholder="Search here">
-                 <!--sear-->
+                <!--sear-->
             </div>
-            <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
-            
-            <div class="user" >
-                <a href="../formLogin/login.html" target="_blank">
-                    <i class="fa-solid fa-user" id="user-icon"></i>
+            <div class="cart-container">
+                <div class="cart-icon">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="cart-dropdown">
+                    <ul class="cart-items"></ul>
+                </div>
+               
+            </div>
+
+            <div class="user">
+                <a href="/formLogin/login.html" target="">
+                    <i class="fa-solid fa-user " id="user-icon"></i>
                 </a>
-                
+
             </div>
-            
-            
+
+
 
         </div>
     </header>
@@ -64,154 +74,190 @@
     </div>
     <div class="product-container container" >
         <div class="box">
-            <img src="accses/products/sp_shoe1.jpg">
-            <h2>Nike Air Force 1</h2>
-            <span class="price">140$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
-            
+            <div class="product" id="1" data-name="Nike Air Force 1" data-price="140$">
+                <img src="accses/products/sp_shoe1.jpg">
+                <h2>Nike Air Force 1</h2>
+                <span class="price">140$</span>
+                <p class="description">Phần thân trên của giày được làm bằng chất liệu da cao cấp, mang đến cảm giác êm ái và thoải mái. Phần đế giữa được làm bằng công nghệ Air-Sole, mang đến khả năng đệm êm ái và hỗ trợ tốt.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
+
         </div>
 
         <div class="box">
-            <img src="accses/products/sp_shoe2.jpg">
-            <h2>Sneaker đế cao</h2>
-            <span class="price">60$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <div class="product" id="2" data-name="Sneaker đế cao" data-price="60$">
+                <img src="accses/products/sp_shoe2.jpg">
+                <h2>Sneaker đế cao</h2>
+                <span class="price">60$</span>
+                <p class="description">Mẫu giày sneaker đế cao giúp làm tôn vóc dáng và tăng tính thời trang.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+                </div>
+            </div>
+
+        <div class="box">
+            <div class="product" id="3" data-name="Zola Sneaker" data-price="85$">
+                <img src="accses/products/sp_shoe3.jpg">
+                <h2>Zola Sneaker</h2>
+                <span class="price">85$</span>
+                <p class="description">Mẫu giầy pha trộn giữa phong cách và sự thoải mái.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+                </div>
+            </div>
+
+        <div class="box">
+            <div class="product" id="4" data-name="Bitis Hunter Flight" data-price="123$">
+                <img src="accses/products/sp_shoe4.jpg">
+                <h2> Bitis Hunter Flight</h2>
+                <span class="price">123$</span>
+                <p class="description">Giày có kiểu dáng mềm mại, form giày ôm chân tự nhiên giúp người dùng tự tin sải bước trên mọi bề mặt.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/products/sp_shoe3.jpg">
-            <h2>Zola Sneaker</h2>
-            <span class="price">85$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <div class="product" id="5" data-name="Nike Dunk" data-price="221,99$">
+                <img src="accses/products/sp_shoe5.jpg">
+                <h2>Nike Dunk</h2>
+                <span class="price">221,99$</span>
+                <p class="description">Mẫu giày bóng rổ khá nổi tiếng.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/products/sp_shoe4.jpg">
-            <h2> Bitis Hunter Flight</h2>
-            <span class="price">123$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <div class="product" id="6" data-name="Big Ball Chunky" data-price="210$">
+                <img src="accses/products/sp_shoe6.jpg">
+                <h2> Big Ball Chunky</h2>
+                <span class="price">210$</span>
+                <p class="description">Sự kết hợp độc đáo của phong cách thể thao và sự bùng nổ của thời trang hiện đại.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/products/sp_shoe5.jpg">
-            <h2>Nike Dunk</h2>
-            <span class="price">221,99$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <div class="product" id="8" data-name="Ulzaang Lolita Baby Doll" data-price="100$">
+                <img src="accses/products/pg2_sp_shoe1.jpg">
+                <h2>Ulzaang Lolita Baby Doll</h2>
+                <span class="price">100$</span>
+                <p class="description">Cá tính rõ rệt, bắt mắt và gây ấn tượng ngay từ cái nhìn đầu tiên</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/products/sp_shoe6.jpg">
-            <h2> Big Ball Chunky</h2>
-            <span class="price">210$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
-        </div>
-      
-        <div class="box">
-            <img src="accses/products/pg2_sp_shoe1.jpg">
-            <h2>Ulzaang Lolita Baby Doll</h2>
-            <span class="price">100$</span>
-            <p class="description">ho</p>
-            <a href="#" class="btn">Add to card</a>
-            
+            <div class="product" id="9" data-name="Naked Wolfe Satisfy" data-price="512$">
+                <img src="accses/products/pg2_sp_shoe2.jpg">
+                <h2>Naked Wolfe Satisfy</h2>
+                <span class="price">512$</span>
+                <p class="description">Phong cách và mang lại cảm giác sang trọng.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/products/pg2_sp_shoe2.jpg">
-            <h2>Naked Wolfe Satisfy</h2>
-            <span class="price">512$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <div class="product" id="10" data-name="Louis Vitton LV Skate Trainer Marine" data-price="1500$">
+                <img src="accses/products/pg2_sp_shoe3.jpg">
+                <h2>Louis Vitton LV Skate Trainer Marine</h2>
+                <span class="price">1500$</span>
+                <p class="description">Mẫu này gây chú ý nhờ cổ giày có đệm, dây buộc đôi kỹ thuật và đế ngoài bằng cao su hai tông màu được trang trí bằng Hoa Monogram.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/products/pg2_sp_shoe3.jpg">
-            <h2>Louis Vitton LV Skate Trainer Marine</h2>
-            <span class="price">1500$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <div class="product" id="11" data-name="Forum XLG" data-price="130$">
+                <img src="accses/products/pg2_sp_shoe4.jpg">
+                <h2>Forum XLG</h2>
+                <span class="price">130$</span>
+                <p class="description"> Với sự kết hợp linh hoạt giữa thân giày bằng da mượt mà và đế ngoài bằng cao su dáng cao, đôi giày này có thể đồng hành cùng bạn từ sân trượt ván đến phòng tranh luôn tràn đầy phong cách. </p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/products/pg2_sp_shoe4.jpg">
-            <h2>Forum XLG</h2>
-            <span class="price">130$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <div class="product" id="12" data-name="BeauToday Outdoor Patchwork Lace-Up Chunky" data-price="300$">
+                <img src="accses/products/pg2_sp_shoe5.jpg">
+                <h2>BeauToday Outdoor Patchwork Lace-Up Chunky</h2>
+                <span class="price">300$</span>
+                <p class="description">Nhẹ nhàng, thoải mái với chất liệu cao cấp.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/products/pg2_sp_shoe5.jpg">
-            <h2>BeauToday Outdoor Patchwork Lace-Up Chunky</h2>
-            <span class="price">300$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <div class="product" id="13" data-name="ouis Vuitton Charlie Trainers" data-price="5310$">
+                <img src="accses/products/pg2_sp_shoe6.jpg">
+                <h2>Louis Vuitton Charlie Trainers</h2>
+                <span class="price">5310$</span>
+                <p class="description">Phần trên được làm từ hỗn hợp vật liệu tái chế và vật liệu sinh học, trong khi đế ngoài làm bằng nhựa sinh học từ các nguồn tái tạo.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
+        </div>
+                <!--Page 2-->
+        <div class="box">
+            <div class="product" id="14" data-name="Para Downtown data-price="1200$<">
+                <img src="accses/products/pg3_sp_shoe1.jpg">
+                <h2>Para Downtown</h2>
+                <span class="price">1200$</span>
+                <p class="description">bỏ</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/products/pg2_sp_shoe6.jpg">
-            <h2>Louis Vuitton Charlie Trainers</h2>
-            <span class="price">5310$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
-        </div>
-        <!--Page 2-->
-        <div class="box">
-            <img src="accses/products/pg3_sp_shoe1.jpg">
-            <h2>Para Downtown</h2>
-            <span class="price">1200$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
-            
+            <div class="product" id="15" data-name="FILA Court Plumpy Low Top Board" data-price="92$">
+                <img src="accses/products/pg3_sp_shoe2.jpg">
+                <h2>FILA Court Plumpy Low Top Board</h2>
+                <span class="price">92$</span>
+                <p class="description">Giày thể thao thoáng mát, chống trơn chợt.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/products/pg3_sp_shoe2.jpg">
-            <h2>FILA Court Plumpy Low Top Board</h2>
-            <span class="price">92$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <div class="product" id="16" data-name="Nike Air Force 1 Low" data-price="150$">
+                <img src="accses/products/pg3_sp_shoe3.jpg">
+                <h2>Nike Air Force 1 Low</h2>
+                <span class="price">150$</span>
+                <p class="description">Mẫu giày mang đến cảm giác tươi mới với cổ thấp, tông màu trắng tối giản két hợp cùng những đường nét cắt xẻ hiện đại ở phần upper.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/products/pg3_sp_shoe3.jpg">
-            <h2>Nike Air Force 1 Low</h2>
-            <span class="price">150$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <div class="product" id="17" data-name="Charlie Trainers" data-price="3200$">
+                <img src="accses/products/pg3_sp_shoe4.jpg">
+                <h2>Charlie Trainers</h2>
+                <span class="price">3200$</span>
+                <p class="description">bỏ</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/products/pg3_sp_shoe4.jpg">
-            <h2>Charlie Trainers</h2>
-            <span class="price">3200$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <div class="product" id="18" data-name="Spooky Baby" data-price="67$">
+                <img src="accses/products/pg3_sp_shoe5.jpg">
+                <h2>Spooky Baby</h2>
+                <span class="price">67$</span>
+                <p class="description">bỏ</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/products/pg3_sp_shoe5.jpg">
-            <h2>Spooky Baby</h2>
-            <span class="price">67$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <div class="product" id="19" data-name="MLB Big Bal" data-price="600$">
+                <img src="accses/products/pg3_sp_shoe6.jpg">
+                <h2>MLB Big Ball</h2>
+                <span class="price">600$</span>
+                <p class="description">bỏ</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
-        <div class="box">
-            <img src="accses/products/pg3_sp_shoe6.jpg">
-            <h2>MLB Big Ball</h2>
-            <span class="price">600$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
-        </div>
-        
-        
-    </div>
+
+   </div>
     <ul class="listPage">
         
     </ul>
@@ -229,164 +275,200 @@
         
     </div>
 
-    <div class="menproduct-container container" >
+    <div class="menproduct-container container">
         <div class="box">
-            <img src="accses/menshoe/m1.jpg">
-            <h2>Balance Ciaga</h2>
-            <span class="price">120$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="Balance Ciaga" data-price="120$">
+                <img src="accses/menshoe/m1.jpg">
+                <h2>Balance Ciaga</h2>
+                <span class="price">120$</span>
+                <p class="description">Thiết kế trẻ trung, năng động.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/menshoe/m2.jpg">
-            <h2>MLB big ball</h2>
-            <span class="price">65$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="MLB big ball" data-price="65$">
+                <img src="accses/menshoe/m2.jpg">
+                <h2>MLB big ball</h2>
+                <span class="price">65$</span>
+                <p class="description">Phong cách thể thao, hiện đại</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/menshoe/m3.jpg">
-            <h2>Anta</h2>
-            <span class="price">25$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="Anta" data-price="25$">
+                <img src="accses/menshoe/m3.jpg">
+                <h2>Anta</h2>
+                <span class="price">25$</span>
+                <p class="description">Bề mặt vải lưới thoáng khí, thiết kể mỏng gọn, ôm sát bàn chân, lên form dáng trẻ trung năng động. </p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/menshoe/m4.jpg">
-            <h2>Nike 1</h2>
-            <span class="price">230$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="Nike 1" data-price="230$">
+                <img src="accses/menshoe/m4.jpg">
+                <h2>Nike 1</h2>
+                <span class="price">230$</span>
+                <p class="description">Chất liệu da sắc nét, màu sắc đậm và lượng ánh sáng hoàn hảo giúp bạn tỏa sáng</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/menshoe/m5.jpg">
-            <h2>Adidas Centenial</h2>
-            <span class="price">540$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="Adidas Centenial" data-price="540$">
+                <img src="accses/menshoe/m5.jpg">
+                <h2>Adidas Centenial</h2>
+                <span class="price">540$</span>
+                <p class="description">Tôn vinh chất di sản thông qua phiên bản tái hiện một trong những biểu tượng bóng rổ của adidas.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/menshoe/m11.jpg">
-            <h2>Pumda Suede</h2>
-            <span class="price">320$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="Pumda Suede" data-price="320$">
+                <img src="accses/menshoe/m11.jpg">
+                <h2>Pumda Suede</h2>
+                <span class="price">320$</span>
+                <p class="description">Đôi giày sử dụng chất liệu da lộn mềm mịn và có kiểu dáng thể thao, được đánh giá là kiểu giày sneaker mang tính biểu tượng của thương hiệu Puma được duy trì đến ngày nay.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
 
         <!--Men Product Page 2-->
 
         <div class="box">
-            <img src="accses/menshoe/m6.jpg">
-            <h2>Vans</h2>
-            <span class="price">75$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="Vans" data-price="75$">
+                <img src="accses/menshoe/m6.jpg">
+                <h2>Vans</h2>
+                <span class="price">75$</span>
+                <p class="description">Giày Vans cổ điển được nâng cấp để nâng cao hiệu suất, có mũ giày bằng da lộn và vải canvas, băng keo quấn một lớp, lót giày UltraCush HD</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/menshoe/m8.jpg">
-            <h2>New Blance</h2>
-            <span class="price">78$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="New Balance" data-price="78$">
+                <img src="accses/menshoe/m8.jpg">
+                <h2>New Blance</h2>
+                <span class="price">78$</span>
+                <p class="description">Với đôi giày trắng cùng sự nhấn nhá nhẹ nhàng của các đường viền đen và đỏ cùng logo chữ N trứ danh giữa thân giày, đôi New Balance 530 ‘White Velocity Red’ này sẽ là một đôi giày thể thao có sự kết hợp tuyệt vời giữa yếu tố cổ điển và hiện đại.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/menshoe/m9.jpg">
-            <h2>Adidas Wmns</h2>
-            <span class="price">68$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="Adidas Wmns" data-price="68$">
+                <img src="accses/menshoe/m9.jpg">
+                <h2>Adidas Wmns</h2>
+                <span class="price">68$</span>
+                <p class="description">bỏ</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/menshoe/m10.jpg">
-            <h2>New Chuck Taylor</h2>
-            <span class="price">91$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="Converse New Chuck Taylor" data-price="91$">
+                <img src="accses/menshoe/m10.jpg">
+                <h2>New Chuck Taylor</h2>
+                <span class="price">91$</span>
+                <p class="description">Mẫu giày Converse full trắng đều toát lên vẻ thanh sạch, tinh tế và làm bật tone outfit một cách thật tự nhiên.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/menshoe/m11.jpg">
-            <h2>Puma Speed</h2>
-            <span class="price">432$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="Puma Speed" data-price="432$">
+                <img src="accses/menshoe/m11.jpg">
+                <h2>Puma Speed</h2>
+                <span class="price">432$</span>
+                <p class="description">bỏ</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/menshoe/m12.jpg">
-            <h2>Zanzara</h2>
-            <span class="price">131$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="Zanzara" data-price="131$">
+                <img src="accses/menshoe/m12.jpg">
+                <h2>Zanzara</h2>
+                <span class="price">131$</span>
+                <p class="description">Giày nam Zanzara được làm bằng da chất lượng cao, hoàn thiện bằng tay và đế có đệm bổ sung.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <!--Men Product Page 3-->
-        
+
         <div class="box">
-            <img src="accses/menshoe/m13.jpg">
-            <h2>Blance 550</h2>
-            <span class="price">612$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="Blance 550" data-price="612$">
+                <img src="accses/menshoe/m13.jpg">
+                <h2>Blance 550</h2>
+                <span class="price">612$</span>
+                <p class="description">Đôi giày có thiết kế đơn giản, thanh lịch với tông màu trắng chủ đạo kết hợp với các chi tiết màu bạc metallic.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="product" id="19" data-name="Lisbon" data-price="32$">
+                <img src="accses/menshoe/m14.jpg">
+                <h2>Lisbon</h2>
+                <span class="price">32$</span>
+                <p class="description">Phong cách thể thao năng động, cá tính, thương hiệu Fila đến từ đất nước Hàn Quốc đã dễ dàng chinh phục được các tín đồ thời trang luôn mong muốn sở hữu.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/menshoe/m14.jpg">
-            <h2>Lisbon</h2>
-            <span class="price">32$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="Convers" data-price="69$">
+                <img src="accses/menshoe/m15.jpg">
+                <h2>Converse</h2>
+                <span class="price">69$</span>
+                <p class="description">bỏ</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/menshoe/m15.jpg">
-            <h2>Converse</h2>
-            <span class="price">69$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="Valentio Gumboy" data-price="877$">
+                <img src="accses/menshoe/m16.jpg">
+                <h2>Valentio Gumboy</h2>
+                <span class="price">877$</span>
+                <p class="description">Giày thể thao Gumboy của Valentino Garavani bằng da mịn với các chi tiết tương phản ở mặt bên, mặt sau và chi tiết da lộn phía trước.
+                </p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="product" id="19" data-name="Thurston" data-price="110$">
+                <img src="accses/menshoe/m12.jpg">
+                <h2>Thurston</h2>
+                <span class="price">110$</span>
+                <p class="description">bỏ</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
         <div class="box">
-            <img src="accses/menshoe/m16.jpg">
-            <h2>Valentio Gumboy</h2>
-            <span class="price">877$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
+            <div class="product" id="19" data-name="Puma CA" data-price="43$">
+                <img src="accses/menshoe/m17.jpg">
+                <h2>Puma CA</h2>
+                <span class="price">43$</span>
+                <p class="description">Trường cũ gặp trường mới ở CA Pro Classic. Sự bổ sung mới nhất cho gia đình California đang đưa phong cách đường phố Bờ Tây lên một tầm cao mới.</p>
+                <button class="add-to-cart" onclick="">Add to card</button>
+            </div>
         </div>
 
-        <div class="box">
-            <img src="accses/menshoe/m12.jpg">
-            <h2>Thurston</h2>
-            <span class="price">110$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
-        </div>
 
-        <div class="box">
-            <img src="accses/menshoe/m17.jpg">
-            <h2>Puma CA</h2>
-            <span class="price">43$</span>
-            <p class="description">x</p>
-            <a href="#" class="btn">Add to card</a> 
-        </div>
 
-       
-        
-    </div>
-    <ul class="listPageShoeMen">
-        
-    </ul>
-    
-   </section>
+                        </div>
+                        <ul class="listPageShoeMen">
+                        </ul>
+
+</section>
 
    <!--Women Product-->
    <section class="womenproduct" id="womenproduct">
@@ -401,8 +483,8 @@
             <img src="accses/womenproduct/w6.jpg">
             <h2>Louis</h2>
             <span class="price">940$</span>
-            <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Thiết kế nhỏ gọn kết hợp với màu hồng xinh xắn</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -410,8 +492,8 @@
             <img src="accses/womenproduct/w1.jpg">
             <h2>Mesh</h2>
             <span class="price">211$</span>
-            <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Phần trên được làm bằng vải lưới có đệm mới, mềm mại, pha trộn cảm hứng thể thao và sự quyến rũ.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -419,8 +501,8 @@
             <img src="accses/womenproduct/w2.jpg">
             <h2>Blance Triple</h2>
             <span class="price">981$</span>
-            <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Giày cao, trẻ trung, mang đi học hoặc đi chơi đẹp</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -428,8 +510,8 @@
             <img src="accses/womenproduct/w3.jpg">
             <h2>Cartoon</h2>
             <span class="price">33$</span>
-            <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Nâng tầm phong cách của bạn với đôi giày chạy bộ sang trọng đến từ thương hiệu AMIMO.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -437,8 +519,8 @@
             <img src="accses/womenproduct/w4.jpg">
             <h2>Smiley</h2>
             <span class="price">320$</span>
-            <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Mẫu giày nhỏ nhắn, dễ thương với họa tiết bên cạnh</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -446,8 +528,8 @@
             <img src="accses/womenproduct/w5.jpg">
             <h2>Naked Wolfe</h2>
             <span class="price">278$</span>
-            <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Phong cách và mang lại cảm giác sang trọng.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -457,8 +539,8 @@
             <img src="accses/womenproduct/w7.jpg">
             <h2>Hike</h2>
             <span class="price">75$</span>
-            <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Gam màu hiện đại, dễ dàng phối với nhiều trang phục và phụ kiện</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -466,8 +548,8 @@
             <img src="accses/womenproduct/w8.jpg">
             <h2>Olvier</h2>
             <span class="price">86$</span>
-            <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Giày thể thao nữ đế độn có thiết kế kiểu dáng buộc dây sneaker cực ngầu, phối màu thể thao trẻ trung, năng động cùng chất liệu bền bỉ hỗ trợ vận động tốt và bảo vệ đôi chân cho người mang.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -475,17 +557,16 @@
             <img src="accses/womenproduct/w9.jpg">
             <h2>Nike Shadow</h2>
             <span class="price">80$</span>
-            <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
-            
+            <p class="description"> Nike Air Force 1 Shadow là một bước ngoặt vui nhộn trên thiết kế giày bóng rổ cổ điển.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
         </div>
 
         <div class="box">
             <img src="accses/womenproduct/w10.jpg">
             <h2>Fabtasy</h2>
             <span class="price">79$</span>
-            <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Thiết kế độc đáo nhưng không kém phần thanh lịch.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -493,8 +574,8 @@
             <img src="accses/womenproduct/w11.jpg">
             <h2>Mode Sen</h2>
             <span class="price">99$</span>
-            <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Giày thể thao Out Of Office của Off White kết hợp phong cách cổ điển với những ảnh hưởng thể thao để tạo nên vẻ ngoài cực kỳ cá tính và linh hoạt.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -502,8 +583,8 @@
             <img src="accses/womenproduct/w12.jpg">
             <h2>Neon</h2>
             <span class="price">90$</span>
-            <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Thiết kế bắt mắt, tươi tắn.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -514,7 +595,7 @@
             <h2>Coco</h2>
             <span class="price">98$</span>
             <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -523,7 +604,7 @@
             <h2>Nubikk</h2>
             <span class="price">65$</span>
             <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -532,7 +613,7 @@
             <h2>Vans Star</h2>
             <span class="price">140$</span>
             <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -541,7 +622,7 @@
             <h2>Nike W Air Force 1</h2>
             <span class="price">320$</span>
             <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -550,7 +631,7 @@
             <h2>Gabana</h2>
             <span class="price">240$</span>
             <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -559,7 +640,7 @@
             <h2>Rebook</h2>
             <span class="price">340$</span>
             <p class="description">zz</p>
-            <a href="#" class="btn">Add to card</a>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -572,19 +653,6 @@
    
    </section>
 
-
-   <section class="about container" id="about">
-    <div class="about-img">
-        <img src="accses/about.jpeg">
-    </div>
-    <div class="about-text">
-        <span>About Us</span>
-        <h2>Chào mừng bạn đến với SneakHub - Nơi Đam Mê Và Chất Lượng Gặp Nhau!</h2>
-        <p>Chúng tôi là đội ngũ đam mê giày, website đặt nền tảng cho sứ mệnh của chúng tôi. Mang đến trải nghiệm mua sắm giày đẳng cấp nhất và làm cho mỗi bước đi của bạn trở nên ý nghĩa.</p>
-        <a href="#" class="btn">Learn more</a>
-    </div>
-
-   </section>
 
    <!--Giay tre em-->
    <section class="product-kidshoe" id="productshoe">
@@ -599,8 +667,8 @@
             <img src="accses/kidshoe/shoekid10.jpg">
             <h2>Nike Air Force 1</h2>
             <span class="price">140$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Đôi giày trẻ em với thiết kế đáng yêu và màu sắc tươi sáng</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -608,40 +676,40 @@
             <img src="accses/kidshoe/shoekid2.jpg">
             <h2>Vans trẻ em</h2>
             <span class="price">60$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Thiết kế dễ mặc và tháo giày, hỗ trợ trẻ tự luyện kỹ năng độc lập</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
         </div>
 
         <div class="box">
             <img src="accses/kidshoe/shoekid4.jpg">
             <h2>Puma X Ray</h2>
             <span class="price">85$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Sự kết hợp hoàn hảo giữa phong cách và tiện ích, phù hợp cho mọi hoạt động của trẻ em.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
         </div>
 
         <div class="box">
             <img src="accses/kidshoe/shoekid7.jpg">
             <h2> Nike Dunk Low</h2>
             <span class="price">99$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Chất liệu chống bám bẩn, dễ dàng làm sạch sau những hoạt động ngoài trời hoặc trong nhà.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
         </div>
 
         <div class="box">
             <img src="accses/kidshoe/shoekid19.jpg">
             <h2>Jaway Kids</h2>
             <span class="price">21,99$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Đường may chắc chắn và chi tiết tinh tế, tăng tính bền bỉ và độ bền của sản phẩm.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
         </div>
 
         <div class="box">
             <img src="accses/kidshoe/shoekid14.jpg">
             <h2>Spider</h2>
             <span class="price">210$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Thiết kế hiện đại và phù hợp với xu hướng thời trang trẻ em.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
         </div>
 
         <div class="box">
@@ -649,7 +717,7 @@
             <h2>Black Canvas</h2>
             <span class="price">120$</span>
             <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -657,8 +725,8 @@
             <img src="accses/kidshoe/shoekid3.jpg">
             <h2>Girl Hight</h2>
             <span classz="price">34$</span>
-            <p class="description">hol</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Sự lựa chọn hoàn hảo cho các hoạt động ngoại ô, đi học và các sự kiện gia đình.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
         </div>
 
         <div class="box">
@@ -666,39 +734,38 @@
             <h2>Little Sam/h2>
             <span class="price">43$</span>
             <p class="description">hoa</p>
-            <a href="#" class="btn">Add to card</a>
-        </div>
+            <button class="add-to-cart" onclick="">Add to card</button>
 
         <div class="box">
             <img src="accses/kidshoe/shoekid6.jpg">
             <h2>Rabbit</h2>
             <span class="price">80$</span>
-            <p class="description">ho</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Mũi giày chống va đập, bảo vệ đôi chân nhỏ khỏi các tác động bất ngờ</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
         </div>
 
         <div class="box">
             <img src="accses/kidshoe/shoekid8.jpg">
             <h2>Winne</h2>
             <span class="price">75$</span>
-            <p class="description">hooa</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Phản quang ở phần đế hoặc logo, tăng khả năng nhận biết và an toàn trong điều kiện ánh sáng yếu.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
         </div>
 
         <div class="box">
             <img src="accses/kidshoe/shoekid9.jpg">
             <h2>L0790</h2>
             <span class="price">44$</span>
-            <p class="description">hola</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Sản phẩm có sẵn trong các size phổ biến, phù hợp với độ tuổi và kích thước của trẻ em.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
         </div>
         <!--Page 3-->
         <div class="box">
             <img src="accses/kidshoe/shoekid11.jpg">
             <h2>Trawberi</h2>
             <span class="price">33$</span>
-            <p class="description">ho</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Đó là sự lựa chọn không thể thiếu để tăng thêm vẻ phong cách và thoải mái cho đôi chân nhỏ của bé.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
             
         </div>
 
@@ -706,24 +773,24 @@
             <img src="accses/kidshoe/shoekid12.jpg">
             <h2>Cat Sofa</h2>
             <span class="price">92$</span>
-            <p class="description">hola </p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Bảo hành chất lượng, đảm bảo yên tâm cho phụ huynh về sự an toàn và tiện ích của sản phẩm.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
         </div>
 
         <div class="box">
             <img src="accses/kidshoe/shoekid13.jpg">
             <h2>Spatos</h2>
             <span class="price">50$</span>
-            <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Tích hợp công nghệ chống trơn trượt, giúp trẻ an toàn khi di chuyển trên mọi bề mặt</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
         </div>
 
         <div class="box">
             <img src="accses/kidshoe/shoekid15.jpg">
             <h2>Kawai Sanio</h2>
             <span class="price">88$</span>
-            <p class="description">ho</p>
-            <a href="#" class="btn">Add to card</a>
+            <p class="description">Bảo quản dễ dàng, không mất nhiều thời gian và công sức cho việc bảo quản giày.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
         </div>
 
         <div class="box">
@@ -731,16 +798,15 @@
             <h2>Hello Kitty</h2>
             <span class="price">67$</span>
             <p class="description">h</p>
-            <a href="#" class="btn">Add to card</a>
+            <button class="add-to-cart" onclick="">Add to card</button>
         </div>
 
         <div class="box">
             <img src="accses/kidshoe/shoekid17.jpg">
             <h2>Disney</h2>
             <span class="price">30$</span>
-            <p class="description">hola</p>
-            <a href="#" class="btn">Add to card</a>
-        </div>
+            <p class="description">Kiểu dáng linh hoạt, phù hợp cho cả trẻ trai và trẻ gái, đáp ứng đa dạng sở thích và phong cách cá nhân.</p>
+            <button class="add-to-cart" onclick="">Add to card</button>
         
         
     </div>
@@ -765,48 +831,48 @@
             <img src="accses/accsessory/hat.jpg">
             <h3>Hat Hat Hat</h3>
             <span>20$</span>
-            <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="details">View details</a>
+            <button class="add-to-cart" onclick="">Add to card</button>
+          
         </div>
 
         <div class="box">
             <img src="accses/accsessory/xct.jpg">
             <h3>Chai xịt chống thấm nước</h3>
             <span>20$</span>
-            <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="details">View details</a>
+            <button class="add-to-cart" onclick="">Add to card</button>
+          
         </div>
 
         <div class="box">
             <img src="accses/accsessory/bc.jpg">
             <h3>Bàn chải đánh giày lông ngựa</h3>
             <span>20$</span>
-            <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="details">View details</a>
+            <button class="add-to-cart" onclick="">Add to card</button>
+            
         </div>
 
         <div class="box">
             <img src="accses/accsessory/tat.jpg">
             <h3>Tất chính hãng</h3>
             <span>20$</span>
-            <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="details">View details</a>
+            <button class="add-to-cart" onclick="">Add to card</button>
+            
         </div>
 
         <div class="box">
             <img src="accses/accsessory/ddvs.jpg">
             <h3>Chai xịt khử mùi giày</h3>
             <span>20$</span>
-            <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="details">View details</a>
+            <button class="add-to-cart" onclick="">Add to card</button>
+            
         </div>
 
         <div class="box">
             <img src="accses/accsessory/giay.jpeg">
             <h3>Dây giày chính hãng</h3>
             <span>20$</span>
-            <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="details">View details</a>
+            <button class="add-to-cart" onclick="">Add to card</button>
+            
         </div>
         <!--Test case accsessory-->
 
@@ -815,9 +881,24 @@
 
     </div>
     
+   </section>
 
+   
+   <section class="about container" id="about">
+    <div class="about-img">
+        <img src="accses/about.jpeg">
+    </div>
+    <div class="about-text">
+        <span>About Us</span>
+        <h2>Chào mừng bạn đến với SneakHub - Nơi Đam Mê Và Chất Lượng Gặp Nhau!</h2>
+        <p>Chúng tôi là đội ngũ đam mê giày, website đặt nền tảng cho sứ mệnh của chúng tôi. Mang đến trải nghiệm mua sắm giày đẳng cấp nhất và làm cho mỗi bước đi của bạn trở nên ý nghĩa.</p>
+        <a href="#" class="btn">Learn more</a>
+    </div>
 
    </section>
+
+
+
 
    <section class="blog" id="blog">
     <div class="heading">
@@ -845,7 +926,7 @@
         <div class="box">
             <img src="accses/mix/mix3.jpg">
             <Span>December 14 2023</Span>
-            <h3>Đôi giày cực đẹp</h3>
+            <h3>Ra mắt sản phẩm mới</h3>
             <p>Đôi giày cực đẹp đem lại hoài niệm...</p>
             <a href="#" class="blog-btn">Đọc thêm<i class="fa-solid fa-arrow-right"></i></a>
         </div>
@@ -908,5 +989,6 @@
     <p>&#169; <a href="https://facebook.com/nqh2k3" target="_blank">Huy Nguyen All Right Reserved</a></p>
    </div>  
    <script src="app.js"></script>
+   <script src="./formLogin/main.js"></script>
 </body>
 </html>

@@ -149,7 +149,59 @@ function loadItemShoe(){
  function changePageShoe(i){
      thisPageShoe = i;
      loadItemShoe();
- }
+}
+// Lấy các phần tử cần sử dụng
+const cartIcon = document.querySelector(".cart-icon");
+const cartCount = document.querySelector(".cart-count");
+const cartDropdown = document.querySelector(".cart-dropdown");
+const cartItems = document.querySelector(".cart-items");
+
+// Biến đếm số lượng sản phẩm
+let itemCount = 0;
+
+// Hàm thêm một sản phẩm vào giỏ hàng
+// Hàm thêm một sản phẩm vào giỏ hàng
+function addToCart(product) {
+    const itemName = product.dataset.name;
+    const itemPrice = parseFloat(product.dataset.price);
+
+    const cartItem = document.createElement("li");
+    cartItem.classList.add("cart-item");
+    cartItem.innerHTML = `
+        <span class="cart-item-name">${itemName}</span>
+        <span class="cart-item-price">${itemPrice.toLocaleString()} $</span>`;
+    cartItems.appendChild(cartItem);
+
+    itemCount++;
+    cartCount.textContent = itemCount;
+    alert("thêm vào giỏ hàng thành công")
+
+}
+
+// Sự kiện được kích hoạt khi click vào nút "Thêm vào giỏ hàng"
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function () {
+        const productContainer = this.closest('.product');
+        if (productContainer) {
+            addToCart(productContainer);
+        }
+    });
+});
+
+// Sự kiện được kích hoạt khi trang web được tải
+
+
+// Hiển thị giỏ hàng khi hover vào biểu tượng giỏ hàng
+cartIcon.addEventListener("mouseenter", () => {
+    if (itemCount > 0) {
+        cartDropdown.style.display = "block";
+    }
+});
+
+// Ẩn giỏ hàng khi hover ra khỏi biểu tượng giỏ hàng
+cartIcon.addEventListener("mouseleave", () => {
+    cartDropdown.style.display = "none";
+});
  
 
 
@@ -293,4 +345,19 @@ function loadItemShoeWomen(){
  function changePageShoeWomen(i){
      thisPageShoeWomen = i;
      loadItemShoeWomen();
- }
+    }
+
+
+
+
+ 
+
+    // Thêm sự kiện click cho nút đăng nhập
+    
+    var check =document.getElementById('user-icon');
+
+    document.getElementById('cc').addEventListener('click', function() {
+        
+        user-icon.classList.remove('icon-vi');
+        user-icon.classList.add('icon-hi');
+    });
